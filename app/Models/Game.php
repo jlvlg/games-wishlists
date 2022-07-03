@@ -10,15 +10,12 @@ class Game extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'description',
-        'release_date',
-        'rating',
-        'developer',
-        'publisher',
-        'platform',
-        'image',
-        'user_id',
+        'name',
+        'url',
+        'price',
+        'bought',
+        'deleted',
+        'wishlist_id',
     ];
 
     public function user()
