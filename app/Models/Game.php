@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Game extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'release_date',
+        'rating',
+        'developer',
+        'publisher',
+        'platform',
+        'image',
+        'user_id',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

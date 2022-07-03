@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Wishlist extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'user_id',
+    ];
+
+    public function games() {
+        return $this->hasMany(Game::class);
+    }
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }
