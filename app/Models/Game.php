@@ -13,13 +13,16 @@ class Game extends Model
         'name',
         'url',
         'price',
+        'store',
+        'auto',
+        'order',
         'bought',
         'deleted',
         'wishlist_id',
     ];
 
-    public function user()
+    public function wishlist()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Wishlist::class, 'wishlist_id');
     }
 }

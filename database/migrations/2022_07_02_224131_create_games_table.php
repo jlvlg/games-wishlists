@@ -19,9 +19,12 @@ return new class extends Migration
 
             $table->string('name');
             $table->string('url');
-            $table->unsignedInteger('price');
+            $table->string('store');
+            $table->unsignedFloat('price');
+            $table->unsignedInteger('order');
             $table->boolean('bought');
             $table->boolean('deleted');
+            $table->boolean('auto');
 
             $table->unsignedBigInteger('wishlist_id');
             $table->foreign('wishlist_id')->references('id')->on('wishlists');

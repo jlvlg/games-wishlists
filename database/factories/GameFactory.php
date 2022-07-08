@@ -20,9 +20,12 @@ class GameFactory extends Factory
             'name' => $this->faker->word,
             'url' => $this->faker->url,
             'price' => $this->faker->numberBetween(1, 1000),
+            'store' => 'Steam',
+            'order' => 1,
             'bought' => $this->faker->boolean,
             'deleted' => false,
             'wishlist_id' => 1,
+            'auto' => true,
         ];
     }
 }
