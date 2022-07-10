@@ -14,7 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="flex font-sans antialiased">
-        <div class="min-h-screen max-w-full min-w-full bg-gray-800">
+        <div class="flex flex-col min-h-screen max-w-full min-w-full bg-gray-800">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -25,9 +25,10 @@
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="flex flex-col flex-1">
                 {{ $slot }}
             </main>
+            <footer class="text-center text-gray-400 fixed bottom-0 inset-x-0">Powered by <a href="https://www.isthereanydeal.com">IsThereAnyDeal.com</a></footer>
         </div>
     </body>
 </html>
