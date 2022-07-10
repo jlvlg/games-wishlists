@@ -15,7 +15,7 @@ class Game extends Model
         'price',
         'store',
         'auto',
-        'order',
+        'store_id',
         'bought',
         'deleted',
         'wishlist_id',

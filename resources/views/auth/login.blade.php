@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-400" />
+                <x-application-logo class="w-20 h-20 fill-current text-gray-200" />
             </a>
         </x-slot>
 
@@ -47,6 +47,7 @@
                     </a>
                 @endif
 
+                <a class='ml-3 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-500 active:bg-gray-200 active:text-gray-800 focus:text-gray-800 focus:outline-none focus:border-gray-200 focus:ring ring-gray-800 disabled:opacity-25 transition ease-in-out duration-150' href="{{route('register')}}">Register</a>
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>

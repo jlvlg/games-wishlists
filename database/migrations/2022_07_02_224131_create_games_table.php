@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('url');
             $table->string('store');
+            $table->string('store_id');
             $table->unsignedFloat('price');
-            $table->unsignedInteger('order');
             $table->boolean('bought');
             $table->boolean('deleted');
             $table->boolean('auto');
