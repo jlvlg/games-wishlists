@@ -31,7 +31,7 @@ class WishlistController extends Controller
                 ['wishlist_id', $wishlist->id],
                 ['deleted', false],
             ]);
-            if ($request->has('query')) {
+            if ($request->has('q')) {
                 $games = $games->where('name', 'ilike', '%' . $request->q . "%");
             }
 

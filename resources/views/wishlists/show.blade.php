@@ -4,6 +4,7 @@
             {{$wishlist->name}}
         </a>
         <form :action="route('wishlists.index')" class="flex items-center flex-1 rounded-lg bg-gray-800 text-gray-400 border border-gray-500 mx-5" method="get">
+            <input type="hidden" name="id" value="{{$wishlist->id}}">
             <label for="search" hidden>Search games</label>
             <input type="search" class="flex-1 border-none bg-transparent focus:border-none focus:ring-none" name="q" id="search" placeholder="Search games" value={{(request()->has('q')) ? request()->input('q') : ''}}>
             <button class="mr-3 {{(request()->filled('q')) ? 'hidden' : ''}}" action="submit"><svg width="24" class="fill-gray-400" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"/></svg></button>
